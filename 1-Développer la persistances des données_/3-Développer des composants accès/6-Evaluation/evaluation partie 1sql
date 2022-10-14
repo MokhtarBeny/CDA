@@ -1,0 +1,23 @@
+-- Active: 1664366408140@@127.0.0.1@3306@northwind
+
+use  northwind;
+
+#1
+select CompanyName, ContactName, ContactTitle, Phone from customers
+WHERE country = 'France';
+
+
+#2
+SELECT productname, unitprice
+ from products
+ join suppliers on suppliers.supplierid = products.supplierid
+ where suppliers.supplierid = 1;
+
+ #3
+
+
+
+
+
+
+
