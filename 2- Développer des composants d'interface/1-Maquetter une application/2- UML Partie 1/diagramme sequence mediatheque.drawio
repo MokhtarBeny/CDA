@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-19T09:32:29.247Z" agent="5.0 (Windows)" etag="dVhO7MPJPU721vrQW9M0" version="20.4.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-19T09:33:12.578Z" agent="5.0 (Windows)" etag="XPbf36LOCf0jTxZq4rLh" version="20.4.1" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="1038" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -108,7 +108,7 @@
         <mxCell id="SDmLGri-ekM5rLtmdUEE-12" value="8-Interroge sur la durée de l&#39;emprunt" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="SDmLGri-ekM5rLtmdUEE-11">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="SDmLGri-ekM5rLtmdUEE-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.4;exitY=0.398;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-4" target="3nuBFxr9cyL0pnOWT2aG-5">
+        <mxCell id="SDmLGri-ekM5rLtmdUEE-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.1;exitY=0.395;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3nuBFxr9cyL0pnOWT2aG-4" target="3nuBFxr9cyL0pnOWT2aG-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="400" y="390" as="sourcePoint" />
             <mxPoint x="450" y="340" as="targetPoint" />
