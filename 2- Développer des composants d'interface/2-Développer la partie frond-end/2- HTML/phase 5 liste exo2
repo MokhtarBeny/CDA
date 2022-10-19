@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <H1> <strong><center> Quelques balises HMTL </strong> </center> </H1>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<H4>La Balise B</H4>
+<BLOCKQUOTE><p> Exemple d'emploi: &lt;B&gt; ce texte en gras &lt;B&gt; </br>
+ Effet dans le navigateur : <strong> ce texte est en gras</strong></p> </BLOCKQUOTE>
+
+
+<H4>La Balise I</H4>
+<BLOCKQUOTE>
+    <p> Exemple d'emploi: &lt;I&gt; ce texte est en italique &lt;I&gt; </br>
+        Effet dans le navigateur : <i> ce texte est en italique</i></p>
+</BLOCKQUOTE>
+
+
+<H4>La Balise U</H4>
+<BLOCKQUOTE>
+    <p> Exemple d'emploi: &lt;I&gt; ce texte est souligné &lt;I&gt; </br>
+        Effet dans le navigateur : <u> ce texte est souligné</u></p>
+</BLOCKQUOTE>
+
+
+
+
+    
+</body>
+</html>
