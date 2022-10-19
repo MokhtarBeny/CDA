@@ -1,0 +1,13 @@
+commande
+moyen de reglement
+payé
+adresse1
+adresse2
+
+produit
+description
+image
+actif
+
+
+categorie <--> souscategorie
