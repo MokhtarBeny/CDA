@@ -13,9 +13,14 @@
 </center>
 </H2>
 
+<H5><center><strong></strong>merci de nous répondre
+</strong>
+</center>
+</H5>
+
 <fieldset>
     <legend>Vos coordonnées :</legend>
-    Nom: <input type="text"><br>
+    Nom<input type="text"><br>
     Prénom: <input type="text"><br>
     Date de naissance: <input type="text"><br>
     Adresse: <input type="text"><br>
@@ -25,6 +30,58 @@
     Email: <input type="text"><br>
     </fieldset> 
 
+</br>
+
+<form>
+    <input type="radio" id="homme" name="fav_language" value="vous êtes un homme">
+    <label for="homme">vous êtes un homme</label>
+    <input type="radio" id="femme" name="fav_language" value="vous êtes un femme">
+    <label for="femme">vous êtes un femme</label>
+      </form>
+</br>
+
+
+    <select name="métier">
+    <option value="tech réseau">tech réseau</option>
+    <option value="concepteur">concepteur</option>
+    <option value="développeur" selected>développeur</option>
+    </select>
+    
+</br>
+   <p>vous avez répondu autre, précisez </p> 
+<form vous avez répondu autre, précisez action="destination.php" method="get">
+    <input type="text" name="nom">
+    <input type="submit" value="envoyer">
+    </form>
+</br>
+
+    <select name="valeur">
+        <option value="&#60;200">&#60;200</option>
+        <option value="&#60;500">&#60;500</option>
+        <option value="&#60;1000€" selected>&#60;1000€</option>
+        </select>
+
+    </br>
+    <p>En quelle année avez-vous suivi le stage afpa ?</p> 
+ <form vous avez répondu autre, précisez action="destination.php" method="get">
+     <input type="text" name="nom">
+     <input type="submit" value="envoyer">
+     </form>
+ </br>
+
+<div style="height:80px;width:280px;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow: scroll;">
+  vos commentaires      
+</div>
+    
+
+
+
+ 
+
+ <H4><LEFT><strong></strong>merci d'avoir répondu au questionnaire
+ </strong>
+</LEFT>
+ </H4>
 
 </body>
 </html>
