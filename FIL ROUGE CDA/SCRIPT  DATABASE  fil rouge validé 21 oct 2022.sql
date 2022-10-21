@@ -23,7 +23,7 @@ CREATE TABLE utilisateur(
    utilisateur_id INT AUTO_INCREMENT,
    utilisateur_prenom VARCHAR(50) ,
    utilisateur_nom VARCHAR(50) ,
-   utilisateur_sexe BOOLEAN,
+   utilisateur_sexe CHAR(1),
    utilisateur_role VARCHAR(50) ,
    utilisateur_telephone VARCHAR(50) ,
    utilisateur_mdp VARCHAR(50) ,
@@ -68,7 +68,7 @@ CREATE TABLE commande(
    commande_id INT AUTO_INCREMENT,
    commande_statut VARCHAR(50) ,
    moyen_reglement VARCHAR(50) ,
-   paye BOOLEAN,
+   paye CHAR(1),
    facturation_date DATETIME,
    commande_date DATE,
    adresse_id INT NOT NULL,
@@ -91,7 +91,7 @@ CREATE TABLE sous_categorie(
 
 CREATE TABLE livraison(
    livraison_id INT AUTO_INCREMENT,
-   livraison_statut BOOLEAN,
+   livraison_statut CHAR(1),
    livraison_date_depart DATE,
    livraison_date DATE,
    commande_id INT NOT NULL,
