@@ -1,0 +1,46 @@
+body {
+    background-color: #eee8aa	;
+    margin-left: 100px;
+    }
+    h1 {
+    font-size: 30pt;
+    color :#139e8c;
+    font-style: italic;
+    border-bottom: solid thin black;
+    }
+    p {
+    font-size: 12pt;
+    line-height: 14pt;
+    font-family: Arial;
+    letter-spacing: 0.2mm;
+    word-spacing: 0.8mm;
+    color: blue;
+    }
+
+
+ .cssliste {
+    font-size: 15pt;
+    color :#af7f51;
+    font-style: italic;
+    border-bottom: solid thin black;
+    }
+
+    .titre3a6 {
+
+        font-size: 31px;
+        color:rgb(214, 123, 4);
+        text-shadow: #eee8aa 2px 0 10px;
+
+    }
+
+    .crack:hover {
+
+        font-size: 50px;
+        color : rgb(52, 20, 128);
+    }
+
+
+    .crack {
+            transition: all 2500ms ;
+
+    }
