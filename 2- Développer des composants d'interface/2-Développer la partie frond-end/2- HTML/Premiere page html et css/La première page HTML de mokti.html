@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title> La première page en HTML 5 de Mokti    </title>
 </head>
 
 <link rel="stylesheet" href="la premiere page html de mokti.css">
 <body>
-    <h1>Le HTML 5</h1>
-    <p>Le langage HTML, c'est PPC WANT TO BE</p>
+    <h1>Mokti World</h1>
+    <p>PPC WANT TO BE</p>
+
+    
+
     <div>
         <p><blockquote>Texte du premiere paragraph</blockquote></p>
         <p>Texte du deuxième paragraphe</p>
@@ -26,7 +32,7 @@
 <div class="titre3a6">
     <h4>Titre H4 moins important que H3</h4> 
 	
-<div class="crack">
+<div >
     <h5>Titre H5 moins important que H4</h5> 
 </div>
 	
@@ -54,7 +60,7 @@
         <li><sub>le second outil</sub></li>
         <li><i>le troisième outil</i></li>
 
-    <a href="mailto: moktippcwanttobe@jetaff.fr?subecjt=un mail de bosseur" title="Pour toutes questions concernant les outils">écrivez-nous!</a>
+    <a  class="crack" href="mailto: moktippcwanttobe@jetaff.fr?subecjt=un mail de bosseur" title="Pour toutes questions concernant les outils">écrivez-nous!</a>
     </ul>
 </section>  
 
@@ -124,7 +130,121 @@
     Nam sed dolor non tortor lacinia lobortis id dapibus nunc.
 </p>
 
+<p class="jaune">Une boîte jaune flottant</p>
+<p class="verte">Une boîte verte doté d'un contenu plus long Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nam sed dolor non tortor lacinia lobortis id dapibus nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nam sed dolor non tortor lacinia lobortis id dapibus nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nam sed dolor non tortor lacinia lobortis id dapibus nunc.</p>
 
+    <div class="left">div 1</div>
+    <div class="left">div 2</div>
+    <div class="left">div 3</div>
+
+    <div id="suivant">Le div sous les flottants</div>
+
+
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+        <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Adresse</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+        <td>Thrall</td>
+        <td>Lokthar</td>
+        <td>3 rue de la désolation, HF45 Storwind</td>
+        </tr>
+        <tr>
+        <td>Illidan</td>
+        <td>Stormrage</td>
+        <td>3 place du Temple Noir, KL78 Valée d'ombrelune</td>
+        </tr>
+    </tbody>   
+    </table>
+    </div>
+
+
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Open this select menu</option>
+            <option value="1">Mage</option>
+            <option value="2">Druide</option>
+            <option value="3">Chevalier de la mort</option>
+          </select>
+
+
+          <div class="table-responsive">
+            <table class="table table-striped table-hover table-bordered">
+            <thead>
+            <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td>DUPOND</td>
+            <td>Léon</td>
+            <td>3 rue de la paix, 38000 Grenoble</td>
+            </tr>
+            <tr>
+            <td>DUBOIS</td>
+            <td>Claire</td>
+            <td>3 place de la poste, 38000 Grenoble</td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+
+            <img src="eye-7440640_960_720.jpg" alt="Image responsive" class="img-fluid mx-auto d-block" >
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <form>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+
+                          
+                    </div>
+                    <div class="col-6" style="overflow: scroll; height: 300px;">
+                        <label for="inputPassword5" class="form-label">Password</label>
+                            <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                            <div id="passwordHelpBlock" class="form-text">
+                              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+             <script  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">    </script> 
 
 </body>
 </html>

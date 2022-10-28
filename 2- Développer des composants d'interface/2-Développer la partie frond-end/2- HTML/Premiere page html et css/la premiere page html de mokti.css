@@ -55,3 +55,30 @@ p {
     border: 1px solid rgba(58, 71, 187, 0.5);
     padding: 10px;
 }
+
+.jaune {
+    background-color: #ffff00;
+    float: right;
+    width: 100px;
+    margin: 0;
+    }
+    .verte {
+    background-color: #00ff00;
+    }
+
+.left
+    {
+    float: left;
+    width: 31.33%;
+    background-color: #c92944;
+    margin: 1%;
+    height: 150px;
+    }
+
+#suivant
+{
+    clear : both;
+    background-color: yellow;
+}
+
+
