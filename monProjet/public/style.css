@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: #E0E1DC;
+}
+
+
+
+.titreAccueil{
+
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.5EM;      
+    background-color:#F0EBCE
+}
+
+.titre{
+
+    font-size: 40px;
+    font-stretch: extra-expanded;
+}
+
+.navbar{
+    
+}
+
+.btn{
+    background-color: black;
+    margin-right: 5%;
+}
+
+footer{
+    display: ;
+    color: aliceblue;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+}
+
+.images_caroussel {
+    height: 100%;
+    width: 100%;
+}
+
+#carouselExampleControls{
+    padding : 3%;
+}  
