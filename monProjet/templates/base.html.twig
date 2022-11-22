@@ -25,9 +25,13 @@
         </div> 
         {% include 'acceuil/navbar.html.twig' %}
 
+     {% block body %}{% endblock %} *
+
     <footer>
-                <p><a href="http://127.0.0.1:8000/apropos">A propos/CGU</a> </p>
-            <div>
+                
+            <div class="class1">
+
+            <center> <p><a href="http://127.0.0.1:8000/apropos">A propos/CGU</a> </p> </center>
                 <div>            
                  </div>      
                                
@@ -35,7 +39,7 @@
         
     </footer>
 
-        {% block body %}{% endblock %} 
+       
 
         
 

@@ -22,6 +22,7 @@ body{
 }
 
 .navbar{
+    height: 80px;
     
 }
 
@@ -31,19 +32,26 @@ body{
 }
 
 footer{
-    display: ;
-    color: aliceblue;
+    font-size: 40px;
+    color: rgb(211, 9, 9);
     position: absolute;
-    bottom: 0px;
+    display: block;
+    bottom: 0px !important;
     width: 100%;
-    background-color: black;
+    height: 5rem;
+    background-color: #23231d;
 }
 
+
+
 .images_caroussel {
+    display: block ;
     height: 100%;
-    width: 100%;
+    max-width: 52%;
+    
 }
 
 #carouselExampleControls{
-    padding : 3%;
+    padding : 1%;
+    display: block;
 }  
