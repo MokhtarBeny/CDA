@@ -8,10 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TestController extends AbstractController
 {
-    #[Route('/', name: 'acceuil')]
-    public function acceuil(): Response
+    #[Route('/', name: 'accueil')]
+    public function accueil(): Response
     {
-        return $this->render('acceuil/index.html.twig', [
+        return $this->render('accueil/index.html.twig', [
             
         ]);
     }
@@ -20,7 +20,7 @@ class TestController extends AbstractController
     #[Route('/categorie', name: 'categorie')]
     public function categorie(): Response
     {
-        return $this->render('acceuil/categorie.html.twig', [
+        return $this->render('accueil/categorie.html.twig', [
            
         ]);
     }
@@ -28,10 +28,12 @@ class TestController extends AbstractController
     #[Route('/apropos', name: 'apropos')]
     public function apropos(): Response
     {
-        return $this->render('acceuil/apropos.html.twig', [
+        return $this->render('accueil/apropos.html.twig', [
             
         ]);
     }
 
 
 }
+
+
