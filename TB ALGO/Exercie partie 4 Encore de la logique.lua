@@ -152,7 +152,127 @@ FIN
 
 //4.6
 
-Variables age en entier permi 
+Variables A, B, C, D en Numérique
+Variables C1, C2, C3, C4 en Booléen
+Début
+Ecrire "Entrez les scores des quatre prétendants :"
+Lire A, B, C, D
+C1 ← A > 50
+C2 ← B > 50 ou C > 50 ou D > 50
+C3 ← A >= B et A >= C et A >= D
+C4 ← A >= 12,5
+Si C1 Alors
+  Ecrire “Elu au premier tour"
+Sinonsi C2 ou Non(C4) Alors
+  Ecrire “Battu, éliminé, sorti !!!”
+SinonSi C3 Alors
+  Ecrire "Ballotage favorable"
+Sinon
+  Ecrire "Ballotage défavorable"
+FinSi
+Fin
+
+
+//4.7
+
+Variables age, perm, acc, assur en Numérique
+Variables C1, C2, C3 en Booléen
+Variable situ en Caractère
+Début
+Ecrire "Entrez l’âge: "
+Lire age
+Ecrire "Entrez le nombre d'années de permis: "
+Lire perm
+Ecrire "Entrez le nombre d'accidents: "
+Lire acc
+Ecrire "Entrez le nombre d'années d'assurance: "
+Lire assur
+C1 ← age >= 25
+C2 ← perm >= 2
+C3 ← assur > 5
+Si Non(C1) et Non(C2) Alors
+  Si acc = 0 Alors
+    situ ← "Rouge"
+  Sinon
+    situ ← "Refusé"
+  FinSi
+Sinonsi ((Non(C1) et C2) ou (C1 et Non(C2)) Alors
+  Si acc = 0 Alors
+    situ ← "Orange"
+  SinonSi acc = 1 Alors
+    situ ← "Rouge"
+  Sinon
+    situ ← "Refusé"
+  FinSi
+Sinon
+  Si acc = 0 Alors
+    situ ← "Vert"
+  SinonSi acc = 1 Alors
+    situ ← "Orange"
+  SinonSi acc = 2 Alors
+    situ ← "Rouge"
+  Sinon
+    situ ← "Refusé"
+  FinSi
+FinSi
+Si C3 Alors
+  Si situ = "Rouge" Alors
+    situ ← "Orange"
+  SinonSi situ = "Orange" Alors
+    situ ← "Vert"
+  SinonSi situ = "Vert" Alors
+    situ ← "Bleu"
+  FinSi
+FinSi
+Ecrire "Votre situation : ", situ
+Fin
+
+
+//4.8
+
+Si M < 1 ou M > 12 Alors
+Ecrire "Date Invalide"
+SinonSi M = 2 Alors
+Si A dp 400 Alors
+  Si J < 1 ou J > 29 Alors
+    Ecrire "Date Invalide"
+  Sinon
+    Ecrire "Date Valide"
+  FinSi
+SinonSi A dp 100 Alors
+  Si J < 1 ou J > 28 Alors
+    Ecrire "Date Invalide"
+  Sinon
+    Ecrire "Date Valide"
+  FinSi
+SinonSi A dp 4 Alors
+  Si J < 1 ou J > 29Alors
+    Ecrire "Date Invalide"
+  Sinon
+    Ecrire "Date Valide"
+  FinSi
+Sinon
+  Si J < 1 ou J > 28 Alors
+    Ecrire "Date Invalide"
+  Sinon
+    Ecrire "Date Valide"
+  FinSi
+FinSi
+SinonSi M = 4 ou M = 6 ou M = 9 ou M = 11 Alors
+Si J < 1 ou J > 30 Alors
+  Ecrire "Date Invalide"
+Sinon
+  Ecrire "Date Valide"
+FinSi
+Sinon
+Si J < 1 ou J > 31 Alors
+  Ecrire "Date Invalide"
+Sinon
+  Ecrire "Date Valide"
+FinSi
+FinSi
+
+
 
 
 
