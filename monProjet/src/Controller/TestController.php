@@ -17,7 +17,7 @@ class TestController extends AbstractController
         ]);
     }
 
-
+    
     #[Route('/categorie/{categorie}', name: 'categorie')]
     public function categorie(Categorie $categorie): Response
     {
@@ -25,6 +25,16 @@ class TestController extends AbstractController
 
         return $this->render('accueil/categorie.html.twig', [
             "categorie" => $categorie
+        ]);
+    }
+
+    #[Route('/souscategorie/{souscategorie}', name: 'souscategorie')]
+    public function souscategorie(SousCategorie $souscategorie): Response
+    {
+        
+
+        return $this->render('accueil/souscategorie.html.twig', [
+            "souscategorie" => $souscategorie
         ]);
     }
 

@@ -23,9 +23,9 @@
 
 .footer1{
     font-size: 40px;
-    position: absolute;
-    bottom: 0px !important;
-    width: 100%;
+    /* position: fixed; */
+    /* bottom: 0px !important; */
+    /* width: 100%; */
     height: 5rem;
     background-color: #F0EBCE;
 }
@@ -50,4 +50,26 @@
     --bs-btn-border-color: var(--bd-violet)!important;
     --bs-btn-border-radius: .5rem!important;
     --bs-btn-hover-color: var(--bs-white)!important;  
+}
+
+.menusc{
+
+    border:solid;
+    border: 1rem solid;
+    border: thick double black;
+    border: 4mm ridge(black);
+}
+
+.shadowbox {
+    width: 15em;
+    border: 1px solid #333;
+    box-shadow: 8px 8px 5px #444;
+    padding: 8px 12px;
+    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+
+.imagescategories {
+
+    height: 300px !important;
 }

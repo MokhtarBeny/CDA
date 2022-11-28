@@ -27,6 +27,9 @@ class SousCategorie
     #[ORM\ManyToOne(inversedBy: 'sousCategories')]
     private ?Categorie $Categorie = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imagesrc = null;
+
     public function __construct()
     {
         $this->produits = new ArrayCollection();
@@ -99,6 +102,18 @@ class SousCategorie
     public function setCategorie(?Categorie $Categorie): self
     {
         $this->Categorie = $Categorie;
+
+        return $this;
+    }
+
+    public function getImagesrc(): ?string
+    {
+        return $this->imagesrc;
+    }
+
+    public function setImagesrc(?string $imagesrc): self
+    {
+        $this->imagesrc = $imagesrc;
 
         return $this;
     }

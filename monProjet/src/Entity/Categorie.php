@@ -24,6 +24,11 @@ class Categorie
     #[ORM\OneToMany(mappedBy: 'Categorie', targetEntity: SousCategorie::class)]
     private Collection $sousCategories;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imagesrc = null;
+
+    
+
     public function __construct()
     {
         $this->sousCategories = new ArrayCollection();
@@ -87,4 +92,18 @@ class Categorie
 
         return $this;
     }
+
+    public function getImagesrc(): ?string
+    {
+        return $this->imagesrc;
+    }
+
+    public function setImagesrc(?string $imagesrc): self
+    {
+        $this->imagesrc = $imagesrc;
+
+        return $this;
+    }
+
+    
 }

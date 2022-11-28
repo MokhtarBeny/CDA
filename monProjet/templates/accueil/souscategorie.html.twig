@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title%}  Shoes Island Categorie 
+
+{% endblock %}
+
+{% block body %}
+
+
+    <h6>PAGE CATEGORIE</h6>
+
+
+
+    {% for scat in sousCategories.produit %}
+        <div class="shadowbox">
+            <a class="menusc" href="/categorie/2/souscategorie">{{ pro.produit }}</a>
+            {{ pro.produit }}
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
+    

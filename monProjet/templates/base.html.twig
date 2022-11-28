@@ -12,13 +12,9 @@
         {% endblock %}
        
     </head>
-    <body>         
-        <div class="titreAccueil">
-            <div class="titre"> 
-                <center>Shoes Island</center>  
-            </div>            
-                <button type="button" class="btn btn-success">Connexion</button>            
-        </div> 
+    <body>  
+
+    {% include  '/partials/_header.html.twig' %}    
          
     {% include  '/partials/_navbar.html.twig' %}     
      {% block header %}

@@ -7,16 +7,42 @@
 {% block body %}
 
 
-    <h6>PAGE CATEGORIE</h6>
+    
+
+    <div class="container">
+            <div class="row">
+             <h1>Les Catégories</h1>
+             <hr>
+        
+        {% for categorie in categorie.sousCategories %}
+            <div class="col-6 border">
+            
+                <a href="/categorie/">
+                    {{ categorie.SousCategorieNom }}  
+                    <img src="/images/{{categorie.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
+                    <div class="text-center">
+                        {{categorie.sousCategorieType}}
+                    </div>                           
+                </a>
+            </div>
+                
+            
+
+        {% endfor %}
+
+            </div>
 
 
+    </div>
 
-    {% for scat in categorie.sousCategories %}
-        <div>
-            {{ scat.sousCategorieNom }}
-        </div>
-
-    {% endfor %}
+    <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit vero animi, maiores dolores autem fugit. Earum quam fugit est similique amet aspernatur quibusdam culpa dolor libero? Excepturi molestias saepe mollitia!
+    </div>
 
 {% endblock %}
     

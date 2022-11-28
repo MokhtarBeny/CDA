@@ -15,60 +15,65 @@ class AppFixtures extends Fixture
         $Categorie1 = new Categorie();
         $Categorie1->setCategorieNom("Homme");
         $Categorie1->setCategorieType("Type1");
+        $Categorie1->setImagesrc("imgcat1.jpg");
         $manager->persist($Categorie1);
 
         $Categorie2 = new Categorie();
         $Categorie2->setCategorieNom("Femme");
         $Categorie2->setCategorieType("Type2");
+        $Categorie2->setImagesrc("imgcat2.png");
         $manager->persist($Categorie2);
 
         $Categorie3 = new Categorie();
         $Categorie3->setCategorieNom("Enfant");
         $Categorie3->setCategorieType("Type3");
+        $Categorie3->setImagesrc("imgcat3.png");
         $manager->persist($Categorie3);
 
 
                 $SousCategorie1 = new SousCategorie();
                 $SousCategorie1->setSousCategorieNom("Sneakers");
                 $SousCategorie1->setSousCategorieType("Street");
+                $SousCategorie1->setImagesrc("imgsouscat1.jpg");
                 $SousCategorie1->setCategorie($Categorie1);
                 $manager->persist($SousCategorie1);
 
                 $SousCategorie2 = new SousCategorie();
                 $SousCategorie2->setSousCategorieNom("Running");
                 $SousCategorie2->setSousCategorieType("Sport");
+                $SousCategorie2->setImagesrc("imgsouscat2.jpg");
                 $SousCategorie2->setCategorie($Categorie1);
                 $manager->persist($SousCategorie2);
                 
                 $SousCategorie3 = new SousCategorie();
                 $SousCategorie3->setSousCategorieNom("Sneakers");
                 $SousCategorie3->setSousCategorieType("Street");
+                $SousCategorie3->setImagesrc("imgsouscat3.jpg");
                 $SousCategorie3->setCategorie($Categorie2);
                 $manager->persist($SousCategorie3);
 
                 $SousCategorie4 = new SousCategorie();
                 $SousCategorie4->setSousCategorieNom("Running");
                 $SousCategorie4->setSousCategorieType("Sport");
+                $SousCategorie4->setImagesrc("imgsouscat4.jpg");
                 $SousCategorie4->setCategorie($Categorie2);
                 $manager->persist($SousCategorie4);
 
                 $SousCategorie5 = new SousCategorie();
                 $SousCategorie5->setSousCategorieNom("Sneakers");
                 $SousCategorie5->setSousCategorieType("Street");
+                $SousCategorie5->setImagesrc("imgsouscat5.jpg");
                 $SousCategorie5->setCategorie($Categorie3);
                 $manager->persist($SousCategorie5);
 
                 $SousCategorie6 = new SousCategorie();
                 $SousCategorie6->setSousCategorieNom("Running");
                 $SousCategorie6->setSousCategorieType("Sport");
+                $SousCategorie6->setImagesrc("imgsouscat6.jpg");
                 $SousCategorie6->setCategorie($Categorie3);
                 $manager->persist($SousCategorie6);
 
-                $SousCategorie7 = new SousCategorie();
-                $SousCategorie7->setSousCategorieNom("MouffleMomoDrouska");
-                $SousCategorie7->setSousCategorieType("RussianStyle");
-                $SousCategorie7->setCategorie($Categorie3);
-                $manager->persist($SousCategorie7);
+                
 
                     $Produit1 = new Produit();
                     $Produit1->setNom("Air Jordan1");
