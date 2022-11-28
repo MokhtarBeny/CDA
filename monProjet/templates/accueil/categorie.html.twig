@@ -9,5 +9,14 @@
 
     <h6>PAGE CATEGORIE</h6>
 
+
+
+    {% for scat in categorie.sousCategories %}
+        <div>
+            {{ scat.sousCategorieNom }}
+        </div>
+
+    {% endfor %}
+
 {% endblock %}
     

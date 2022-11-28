@@ -24,6 +24,9 @@ class SousCategorie
     #[ORM\OneToMany(mappedBy: 'SousCategorie', targetEntity: Produit::class)]
     private Collection $produits;
 
+    #[ORM\ManyToOne(inversedBy: 'sousCategories')]
+    private ?Categorie $Categorie = null;
+
     public function __construct()
     {
         $this->produits = new ArrayCollection();
@@ -84,6 +87,18 @@ class SousCategorie
                 $produit->setSousCategorie(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->Categorie;
+    }
+
+    public function setCategorie(?Categorie $Categorie): self
+    {
+        $this->Categorie = $Categorie;
 
         return $this;
     }

@@ -1,13 +1,5 @@
-body{
-    margin:0;
-    padding: 0;
-    background-color: #E0E1DC;
-}
-
-
 
 .titreAccueil{
-
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-weight: 900;
@@ -16,14 +8,12 @@ body{
 }
 
 .titre{
-
     font-size: 60px;
     font-stretch: extra-expanded;
 }
 
 .navbar{
-    height: 80px;
-    
+    height: 80px;    
 }
 
 .btn{
@@ -31,15 +21,13 @@ body{
     margin-right: 5%;
 }
 
-footer{
+.footer1{
     font-size: 40px;
-    color: rgb(211, 9, 9);
     position: absolute;
-    display: block;
     bottom: 0px !important;
     width: 100%;
     height: 5rem;
-    background-color: #23231d;
+    background-color: #F0EBCE;
 }
 
 
@@ -47,22 +35,19 @@ footer{
 .images_caroussel {
     display: block ;
     height: 100%;
-    max-width: 45%;
-    
+    max-width: 45%;    
 }
 
-#carouselExampleControls{
+#carouselExampleControls {
     padding : 1%;
     display: block;
 }  
 
 .buttonco{
-
     --bs-btn-font-weight: 600 !important;
     --bs-btn-color: var(--bs-white)!important;
     --bs-btn-bg: var(--bd-violet)!important;
     --bs-btn-border-color: var(--bd-violet)!important;
     --bs-btn-border-radius: .5rem!important;
-    --bs-btn-hover-color: var(--bs-white)!important;   
-  
+    --bs-btn-hover-color: var(--bs-white)!important;  
 }

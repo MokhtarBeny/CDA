@@ -29,11 +29,12 @@ class Produit
     #[ORM\Column]
     private ?bool $actif = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 3, scale: 2)]
-    private ?string $tva = null;
-
+    
     #[ORM\ManyToOne(inversedBy: 'produits')]
     private ?SousCategorie $SousCategorie = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?float $Prix = null;
 
     public function getId(): ?int
     {
@@ -100,18 +101,7 @@ class Produit
         return $this;
     }
 
-    public function getTva(): ?string
-    {
-        return $this->tva;
-    }
-
-    public function setTva(string $tva): self
-    {
-        $this->tva = $tva;
-
-        return $this;
-    }
-
+    
     public function getSousCategorie(): ?SousCategorie
     {
         return $this->SousCategorie;
@@ -120,6 +110,18 @@ class Produit
     public function setSousCategorie(?SousCategorie $SousCategorie): self
     {
         $this->SousCategorie = $SousCategorie;
+
+        return $this;
+    }
+
+    public function getPrix(): ?float
+    {
+        return $this->Prix;
+    }
+
+    public function setPrix(?float $Prix): self
+    {
+        $this->Prix = $Prix;
 
         return $this;
     }

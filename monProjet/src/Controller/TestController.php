@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Categorie;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TestController extends AbstractController
 {
@@ -17,11 +18,13 @@ class TestController extends AbstractController
     }
 
 
-    #[Route('/categorie', name: 'categorie')]
-    public function categorie(): Response
+    #[Route('/categorie/{categorie}', name: 'categorie')]
+    public function categorie(Categorie $categorie): Response
     {
+        
+
         return $this->render('accueil/categorie.html.twig', [
-           
+            "categorie" => $categorie
         ]);
     }
 
@@ -32,6 +35,30 @@ class TestController extends AbstractController
             
         ]);
     }
+
+    /* #[Route('/apropos', name: 'apropos')]
+    public function apropos(): Response
+    {
+        return $this->render('accueil/apropos.html.twig', [
+            
+        ]);
+    }
+
+    #[Route('/apropos', name: 'apropos')]
+    public function apropos(): Response
+    {
+        return $this->render('accueil/apropos.html.twig', [
+            
+        ]);
+    }
+
+    #[Route('/apropos', name: 'apropos')]
+    public function apropos(): Response
+    {
+        return $this->render('accueil/apropos.html.twig', [
+            
+        ]);
+    } */
 
 
 }

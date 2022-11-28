@@ -37,11 +37,17 @@
  {% block javascripts %}
 
             <script >
-                $(document).ready(function(){
+                /*$(document).ready(function(){
                 $('.carousel').carousel({
-                interval: 200
+                interval: 800
                 })
-                });    
+                }); */ 
+                const myCarouselElement = document.querySelector('#myCarousel')
+                const carousel = new bootstrap.Carousel(myCarouselElement, {
+                  interval: 2000,
+                  wrap: false
+                })              
+   
             </script>
 
  {% endblock %}
