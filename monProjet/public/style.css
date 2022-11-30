@@ -32,16 +32,14 @@
 
 
 
-.images_caroussel {
-    display: block ;
-    height: 100%;
-    max-width: 45%;    
+.container{
+    width: 100%;
+    max-width: 1000px;    
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#carouselExampleControls {
-    padding : 1%;
-    display: block;
-}  
+
 
 .buttonco{
     --bs-btn-font-weight: 600 !important;

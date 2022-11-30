@@ -9,10 +9,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TestController extends AbstractController
 {
-    #[Route('/', name: 'accueil')]
+    #[Route('/{categorie}', name: 'accueil')]
     public function accueil(): Response
     {
         return $this->render('accueil/index.html.twig', [
+            "categorie" => $categorie
             
         ]);
     }
