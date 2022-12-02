@@ -36,6 +36,9 @@ class Produit
     #[ORM\Column(nullable: true)]
     private ?float $Prix = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $imgsrc = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -122,6 +125,18 @@ class Produit
     public function setPrix(?float $Prix): self
     {
         $this->Prix = $Prix;
+
+        return $this;
+    }
+
+    public function getImgsrc(): ?string
+    {
+        return $this->imgsrc;
+    }
+
+    public function setImgsrc(?string $imgsrc): self
+    {
+        $this->imgsrc = $imgsrc;
 
         return $this;
     }

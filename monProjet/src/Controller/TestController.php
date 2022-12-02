@@ -2,19 +2,26 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Categorie;
+use App\Entity\SousCategorie;
+use App\Repository\ProduitRepository;
+use App\Repository\CategorieRepository;
+use App\Repository\SousCategorieRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TestController extends AbstractController
 {
-    #[Route('/{categorie}', name: 'accueil')]
-    public function accueil(): Response
+    #[Route('/', name: 'accueil')]
+    public function cat( CategorieRepository $categorieRepository): Response
     {
+       
         return $this->render('accueil/index.html.twig', [
-            "categorie" => $categorie
-            
+
+            "categories" => $categorieRepository->findAll()                 
+               
         ]);
     }
 
@@ -29,13 +36,14 @@ class TestController extends AbstractController
         ]);
     }
 
-    #[Route('/souscategorie/{souscategorie}', name: 'souscategorie')]
-    public function souscategorie(SousCategorie $souscategorie): Response
+    #[Route('/souscategorie/{souscategorie}', name: 'Produit')]
+    public function produits(SousCategorie $souscategorie ): Response
     {
-        
 
+       
         return $this->render('accueil/souscategorie.html.twig', [
-            "souscategorie" => $souscategorie
+            "produits" => $souscategorie->getProduits()
+            
         ]);
     }
 

@@ -7,20 +7,20 @@
 
 {% block body %}
 
-<
+
     <div class="container">
             <div class="row">
-             <h1>Les Catégories</h1>
+             <center><h1>Les Catégories</h1> </center>
              <hr>
         
-        {% for categorie %}
-            <div class="col-6 border">
+        {% for cat in categories %}
+            <div class="col-4 border">
             
-                <a href="/categorie/">
-                    {{ CategorieNom}}  
-                    <img src="/images/{{categorie.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
+                <a href="{{ path("categorie",{categorie:cat.id})}}">
+                    {{ cat.CategorieNom }}  
+                    <img src="/images/{{cat.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
                     <div class="text-center">
-                        {{categorieType}}
+                        {{cat.CategorieType}}
                     </div>                           
                 </a>
             </div>

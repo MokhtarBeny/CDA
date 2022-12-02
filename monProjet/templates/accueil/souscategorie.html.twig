@@ -1,23 +1,35 @@
 {% extends "base.html.twig" %}
 
-{% block title%}  Shoes Island Categorie 
+{% block title%}  Produit
 
 {% endblock %}
 
 {% block body %}
 
+<div class="container">
+    <div class="row">
+        <h1>Produits</h1>
+     </div> 
 
-    <h6>PAGE CATEGORIE</h6>
+        <div class="col-4 row border-radius">
+        {% for produit in produits %}
+            
+                <a href="/categorie/">
+                    {{produit.nom}}
+                    <img src="/images/{{produit.imgsrc}}" alt="categorie" class="img-fluid w-100 ">
+        
+        {% endfor %}  
+       
+    
+    
+    
+    </div>
 
 
 
-    {% for scat in sousCategories.produit %}
-        <div class="shadowbox">
-            <a class="menusc" href="/categorie/2/souscategorie">{{ pro.produit }}</a>
-            {{ pro.produit }}
-        </div>
+</div>
 
-    {% endfor %}
+
 
 {% endblock %}
-    
+  
