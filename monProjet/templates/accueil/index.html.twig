@@ -13,8 +13,13 @@
              <center><h1>Les Catégories</h1> </center>
              <hr>
         
+<<<<<<< HEAD
         {% for cat in categories %}
             <div class="col-4 border">
+=======
+        {% for categorie in categorie.CategorieNom %}
+            <div class="col-6 border">
+>>>>>>> 183b94a4157b2876dc932567f0e250b5586d1846
             
                 <a href="{{ path("categorie",{categorie:cat.id})}}">
                     {{ cat.CategorieNom }}  
