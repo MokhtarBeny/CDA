@@ -17,7 +17,7 @@
         {% for categorie in categorie.sousCategories %}
             <div class="col-6 border">
             
-                <a href="/categorie/">
+                <a href="{{ path("Produit", {souscategorie:categorie.id})}}">
                     {{ categorie.SousCategorieNom }}  
                     <img src="/images/{{categorie.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
                     <div class="text-center">

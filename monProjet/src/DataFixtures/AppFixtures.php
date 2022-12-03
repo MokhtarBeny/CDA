@@ -15,19 +15,19 @@ class AppFixtures extends Fixture
         $Categorie1 = new Categorie();
         $Categorie1->setCategorieNom("Homme");
         $Categorie1->setCategorieType("Type1");
-        $Categorie1->setImagesrc("imgcat1.jpg");
+        $Categorie1->setImagesrc("/imgcat1.jpg");
         $manager->persist($Categorie1);
 
         $Categorie2 = new Categorie();
         $Categorie2->setCategorieNom("Femme");
         $Categorie2->setCategorieType("Type2");
-        $Categorie2->setImagesrc("imgcat2.png");
+        $Categorie2->setImagesrc("/imgcat2.png");
         $manager->persist($Categorie2);
 
         $Categorie3 = new Categorie();
         $Categorie3->setCategorieNom("Enfant");
         $Categorie3->setCategorieType("Type3");
-        $Categorie3->setImagesrc("imgcat3.png");
+        $Categorie3->setImagesrc("/imgcat3.png");
         $manager->persist($Categorie3);
 
 
@@ -82,6 +82,7 @@ class AppFixtures extends Fixture
                     $Produit1->setImage("#1");
                     $Produit1->setActif(0);
                     $Produit1->setPrix(90);
+                    $Produit1->setImgsrc("jordan1.png");
                     $Produit1->setSousCategorie($SousCategorie1);
                     $manager->persist($Produit1);
 
@@ -92,6 +93,7 @@ class AppFixtures extends Fixture
                     $Produit2->setImage("#2");              
                     $Produit2->setActif(0);
                     $Produit2->setPrix(60);
+                    $Produit2->setImgsrc("jordan3.png");
                     $Produit2->setSousCategorie($SousCategorie2);
                     $manager->persist($Produit2);
 
@@ -102,6 +104,7 @@ class AppFixtures extends Fixture
                     $Produit3->setImage("#3");
                     $Produit3->setActif(0);
                     $Produit3->setPrix(100);
+                    $Produit3->setImgsrc("jordan1.png");
                     $Produit3->setSousCategorie($SousCategorie3);
                     $manager->persist($Produit3);
 
@@ -112,6 +115,7 @@ class AppFixtures extends Fixture
                     $Produit4->setImage("#4");
                     $Produit4->setActif(0);
                     $Produit4->setPrix(70);
+                    $Produit4->setImgsrc("jordan3.png");
                     $Produit4->setSousCategorie($SousCategorie4);
                     $manager->persist($Produit4);
 
@@ -124,6 +128,7 @@ class AppFixtures extends Fixture
                     $Produit5->setImage("#5");
                     $Produit5->setActif(0);
                     $Produit5->setPrix(80);
+                    $Produit5->setImgsrc("jordan1.png");
                     $Produit5->setSousCategorie($SousCategorie5);
                     $manager->persist($Produit5);
 
@@ -134,6 +139,7 @@ class AppFixtures extends Fixture
                     $Produit6->setImage("#6");
                     $Produit6->setActif(0);
                     $Produit6->setPrix(80);
+                    $Produit6->setImgsrc("jordan3.png");
                     $Produit6->setSousCategorie($SousCategorie6);
                     $manager->persist($Produit6);
 
