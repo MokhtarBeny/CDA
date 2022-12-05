@@ -15,12 +15,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TestController extends AbstractController
 {
     #[Route('/', name: 'accueil')]
-    public function cat( CategorieRepository $categorieRepository): Response
+    public function cat( Categorie $categorie): Response
     {
        
         return $this->render('accueil/index.html.twig', [
 
-            "categories" => $categorieRepository->findAll()                 
+            "categories" => $categorie-> findALL()                
                
         ]);
     }
