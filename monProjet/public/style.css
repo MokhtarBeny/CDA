@@ -1,33 +1,25 @@
-
+/* 
 .titreAccueil{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     font-weight: 900;
     font-size: 1EM;      
     background-color:#F0EBCE
-}
+} 
 
-.titre{
+ .titre{
     font-size: 60px;
     font-stretch: extra-expanded;
 }
 
-.navbar{
-    height: 80px;    
-}
+
 
 .btn{
     background-color: black;
     margin-right: 5%;
 }
 
-.footer1{
-    font-size: 40px;
-    /* position: fixed; */
-    /* bottom: 0px !important; */
-    width: 100%;
-    height: 5rem;
-    background-color: #F0EBCE;
+
 }
 
 
@@ -69,5 +61,21 @@
 
 .imagescategories {
 
-    height: 300px !important;
+    background-size: 200px 100px;
+} */
+
+.footer1{
+    font-size: 40px;
+    position: fixed; 
+     bottom: 0px !important; 
+    width: 100%;
+    height: 5rem;
+    background-color: #F0EBCE;
+}
+
+.produithome {
+
+    margin-right: auto  !important;
+    margin-left: auto !important;
+
 }

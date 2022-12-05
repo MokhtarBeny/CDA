@@ -9,10 +9,9 @@
 
 
     <div class="container">
-            <div class="row">
-             <center><h1>Les Catégories</h1> </center>
-             <hr>
-             </div>        
+         <div class="row">
+          <center><h1>Les Catégories</h1> </center>
+          <hr>                     
         {% for cat in categories %}
             <div class="col-4 border">        
                 <a href="{{ path("categorie",{categorie:cat.id})}}">
@@ -22,10 +21,11 @@
                         {{cat.CategorieType}}
                     </div> 
                 </a>
-                                       
-                
-            </div>
+            </div>                          
+                             
+    
+        {%  endfor %}
+        </div>
     </div>
-        {% endfor %}
                 
 {% endblock %}

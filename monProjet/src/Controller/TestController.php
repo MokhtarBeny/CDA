@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Produit;
 use App\Entity\Categorie;
 use App\Entity\SousCategorie;
 use App\Repository\ProduitRepository;
@@ -14,16 +15,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class TestController extends AbstractController
 {
-    #[Route('/', name: 'accueil')]
-    public function cat( Categorie $categorie): Response
+       #[Route('/', name: 'accueil')]
+    public function cat( CategorieRepository $categorieRepository): Response
     {
        
         return $this->render('accueil/index.html.twig', [
 
-            "categories" => $categorie-> findALL()                
-               
+            "categories" => $categorieRepository->findAll()       
+
         ]);
     }
+
 
     
     #[Route('/categorie/{categorie}', name: 'categorie')]
@@ -47,6 +49,16 @@ class TestController extends AbstractController
         ]);
     }
 
+     #[Route('/produit/{produit}', name: 'produit')]
+    public function produit(ProduitRepository $repo, Produit $produit): Response
+
+    {
+        $produit = $repo->find($produit);
+        return $this->render('produit/produit_desc.html.twig', [
+            'liste_des_produits' => $produit
+            
+        ]);
+    }
     #[Route('/apropos', name: 'apropos')]
     public function apropos(): Response
     {
@@ -55,13 +67,11 @@ class TestController extends AbstractController
         ]);
     }
 
-    /* #[Route('/apropos', name: 'apropos')]
-    public function apropos(): Response
-    {
-        return $this->render('accueil/apropos.html.twig', [
-            
-        ]);
+    
     }
+
+
+    /*
 
     #[Route('/apropos', name: 'apropos')]
     public function apropos(): Response
@@ -78,8 +88,3 @@ class TestController extends AbstractController
             
         ]);
     } */
-
-
-}
-
-
