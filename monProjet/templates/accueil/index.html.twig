@@ -1,31 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block stylesheets %}
-{% endblock %}
-
+{% block stylesheets %}{% endblock %}
 
 
 {% block body %}
 
 
-    <div class="container">
-         <div class="row">
-          <center><h1>Les Catégories</h1> </center>
-          <hr>                     
-        {% for cat in categories %}
-            <div class="col-4 border">        
-                <a href="{{ path("categorie",{categorie:cat.id})}}">
-                    {{ cat.CategorieNom }}  
-                    <img src="/images/{{cat.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories">
-                    <div class="text-center">
-                        {{cat.CategorieType}}
-                    </div> 
-                </a>
-            </div>                          
-                             
-    
-        {%  endfor %}
-        </div>
-    </div>
-                
+	<div class="container">
+		<div class="row">
+			<center>
+				<h1>Les Catégories</h1>
+			</center>
+			<hr>
+			{% for cat in categories %}
+				<div class="col-4 border  mt-4">
+					<a href="{{ path("categorie",{categorie:cat.id})}}">
+						<center>{{ cat.CategorieNom }} </center>
+						<center><img src="/images/{{cat.imagesrc}}" alt="categorie" class="img-fluid w-100 imagescategories"> </center>
+						<div class="text-center">
+							{{cat.CategorieType}}
+						</div>
+					</a>
+				</div>
+
+
+			{% endfor %}
+		</div>
+	</div>
+
 {% endblock %}

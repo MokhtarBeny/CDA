@@ -17,11 +17,14 @@ class TestController extends AbstractController
 {
        #[Route('/', name: 'accueil')]
     public function cat( CategorieRepository $categorieRepository): Response
+
     {
-       
+        $categories = $categorieRepository->findAll();
+        
         return $this->render('accueil/index.html.twig', [
 
-            "categories" => $categorieRepository->findAll()       
+            "categories" => $categories          
+                  
 
         ]);
     }
@@ -49,13 +52,13 @@ class TestController extends AbstractController
         ]);
     }
 
-     #[Route('/produit/{produit}', name: 'produit')]
-    public function produit(ProduitRepository $repo, Produit $produit): Response
+     #[Route('/produit/{id}', name: 'produitdesc')]
+    public function produit(ProduitRepository $produitRepository, int $id): Response
 
     {
-        $produit = $repo->find($produit);
+        
         return $this->render('produit/produit_desc.html.twig', [
-            'liste_des_produits' => $produit
+            'produit' => $produitRepository->find($id)
             
         ]);
     }

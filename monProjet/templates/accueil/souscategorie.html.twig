@@ -6,7 +6,7 @@
 
 {% block body %}
 
-<div class="container  justify-content-center">
+<div class="container  justify-content-center ">
     <div class="row">
         <h1>Produits</h1>
      </div> 
@@ -14,9 +14,9 @@
         <div class="col-8 row border-radius">
         {% for produit in produits %}
             
-                <a href="/produit/">
+                <a href="/produit/{{produit.id}}">
                     {{produit.nom}}
-                    <img src="/images/{{produit.imgsrc}}" alt="categorie" class="img-fluid w-100 ">
+                    <img src="/images/{{produit.imgsrc}}" alt="categorie" class="img-fluid w-100">
         
         {% endfor %}       
     </div>

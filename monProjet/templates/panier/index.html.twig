@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre panier s'afficher ci-dessous.{% endblock %}
+
+{% block body %}
+
+
+ <h1>Panier</h1>
+
+ <table class="table">
+        <thead>
+            <tr>
+            <th>Produit</th>
+            <th>Prix</th>
+            <th>Quantité</th>
+            <th>Total</th>
+            <th>Action</th>           
+            
+            </tr>        
+        </thead> 
+        <tbody>
+
+        
+        </tbody>
+ </table>
+
+ {{dump ()}}
+
+{% for pro in panier %}
+
+
+<div>
+{{ pro.nom}}
+</div>
+
+<div>
+{{ pro.quantite}}
+</div>
+
+<div>
+{{ pro.prix}}
+</div>
+
+    
+{% endfor %}
+
+<hr>
+
+Total = {{ total }}
+
+<a href="/clear"
+
+<button type="button" class="btn btn-danger">
+
+ Vider le panier
+
+ </button>
+
+</a> 
+
+{% endblock %}
