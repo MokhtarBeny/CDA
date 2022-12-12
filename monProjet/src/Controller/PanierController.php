@@ -79,4 +79,40 @@ class PanierController extends AbstractController
 
         return $this->redirect("/panier");
     }
+
+
+
+    #[Route('/remove/{id}', name: 'app_remove')]
+    public function remove(SessionInterface $session, Produit $id): Response
+    {
+        $panier = $session->get("panier", []);
+
+        
+        $p = null;
+        $position = 0;
+        foreach ( $panier as $i => $pro ) {
+            if ($pro->getId() == $id->getId()) {
+                $p = $pro;
+                $position = $i;
+            }
+        }
+        
+        if ($p==null) {  // le produit n'existe pas dans le panier
+
+            
+            
+        }
+        else {
+            $p->quantite--;
+            if($p->quantite == 0){
+                unset($panier[$position]);
+            }
+
+        }
+        // sauvegarde dans la session
+        $session->set("panier", $panier);
+        
+        // on revient dans l'index
+        return $this->redirect("/panier");
+    }
 }

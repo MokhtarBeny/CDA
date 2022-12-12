@@ -50,7 +50,16 @@
         </li> #}
       </ul>
       <div >
-        <a href="/panier" class="panierinfo ">Panier >> {{ panier | length }} produit</a>
+        <a href="/panier" class="panierinfo ">Panier >>  
+          
+          {% set total = 0 %}
+                            {% for item in panier %}
+                                {% set total = total + item.quantite %}
+                            {% endfor %}
+                            {{ total }}
+
+
+          produit</a>
       </div>
       
       <form class="d-flex">

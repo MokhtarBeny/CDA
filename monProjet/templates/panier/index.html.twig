@@ -20,42 +20,54 @@
         </thead> 
         <tbody>
 
-        
+        {% for pro in panier %}
+
+        <tr>
+            <td> {{ pro.nom}} </td>
+            <td> {{ pro.prix}} € </td>
+            <td> {{ pro.quantite}} </td>
+            <td> {{ pro.quantite * pro.prix}} </td>
+            <td>
+            {# TODO #}
+            
+            <a href="{{path("app_remove", {id: pro.id})}}" class="btn btn-danger">
+            <i class="bi ci-cart-dash">-</i>
+            </a>
+            <a href="{{path("app_add", {id: pro.id})}}" class="btn btn-success">   
+            <i class="bi bi-cart-plus">+</i>    
+            </a>
+                       
+            
+            </td>
+        </tr>
+
+        {% else %}
+            <tr>
+                <td colspan="5" class="text-center"> Votre panier est vide. </td>
+            </tr>
+            
+        {% endfor %}
         </tbody>
+
+        <tfoot>
+            <tr>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td> Total = {{ total }} €</td>
+             <td>
+             <a href="/clear"
+            <button type="button" class="btn btn-danger">
+            Vider le panier
+            </button>
+            </a> 
+             </td>
+            </tr>
+        
+        </tfoot>
  </table>
-
- {{dump ()}}
-
-{% for pro in panier %}
-
-
-<div>
-{{ pro.nom}}
-</div>
-
-<div>
-{{ pro.quantite}}
-</div>
-
-<div>
-{{ pro.prix}}
-</div>
-
-    
-{% endfor %}
 
 <hr>
 
-Total = {{ total }}
-
-<a href="/clear"
-
-<button type="button" class="btn btn-danger">
-
- Vider le panier
-
- </button>
-
-</a> 
 
 {% endblock %}
