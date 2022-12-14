@@ -61,6 +61,14 @@
 
           produit</a>
       </div>
+
+      <div >      
+        {% if app.user %}
+          <a  class="navco" href="/logout"> se déconnecter</a>          
+        {% else %}
+          <a  class="navco" href="/login"> se connecter</a>          
+        {% endif %}
+      </div>
       
       <form class="d-flex">
         <input class="form-control me-sm-2" type="text" placeholder="Search">
