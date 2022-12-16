@@ -4,12 +4,18 @@ namespace App\Controller;
 
 
 use App\Entity\Produit;
-use App\Repository\CategorieRepository;
+use App\Entity\Commande;
+use App\Entity\DetailCommande;
 use App\Repository\ProduitRepository;
+use App\Repository\CategorieRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use DateTime;
+use Sensio\Bundle\FrameworkExtraBundle\EventListener\IsGrantedListener;
 
 class PanierController extends AbstractController
 {   
@@ -115,4 +121,41 @@ class PanierController extends AbstractController
         // on revient dans l'index
         return $this->redirect("/panier");
     }
+
+    
+    #[IsGranted("ROLE_USER")]
+    #[Route('/valid', name: 'app_valid')]
+    public function valid(ProduitRepository $repo, SessionInterface $session, EntityManagerInterface $manager): Response
+    {
+        $panier = $session->get("panier", []);
+
+        $com = new Commande();
+        $com->setUser($this->getUser());
+        $com->setDateCommande(new DateTime());
+        $com->setPaye(mt_rand(0, 1));
+        $com->setMoyenReglement('paypal');
+        $com->setStatutCommande('en cours');
+        $manager->persist($com);
+
+        foreach ($panier as $produit) {
+
+
+            $p = $repo->find($produit->getId());
+
+            $sc = new DetailCommande();
+            $sc->setCommande($com);
+            $sc->setProduit($p);
+            $sc->setQuantite(3);
+            $manager->persist($sc);
+            $manager->flush();
+
+        }
+
+        $session->set("panier", []);
+        
+        return $this->redirect("/panier");
+       
+    }
+
+
 }

@@ -2,10 +2,13 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Commande;
+use App\Entity\DetailCommande;
 use App\Entity\User;
 use App\Entity\Produit;
 use App\Entity\Categorie;
 use App\Entity\SousCategorie;
+use DateTime;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
@@ -20,6 +23,9 @@ class AppFixtures extends Fixture
     }
     public function load(ObjectManager $manager): void
     {
+
+
+
         $u1 = new User ();
         $u1->setEmail("mokti@gmail.com");
         $u1->setRoles(["ROLE_USER"]);
@@ -162,6 +168,28 @@ class AppFixtures extends Fixture
                     $Produit6->setImgsrc("jordan3.png");
                     $Produit6->setSousCategorie($SousCategorie6);
                     $manager->persist($Produit6);
+
+                    $com1 = new Commande();
+                    $com1->setUser($u1);
+                    $com1->setDateCommande(new DateTime());
+                    $com1->setPaye(mt_rand(0, 1));
+                    $com1->setMoyenReglement('paypal');
+                    $com1->setStatutCommande('en cours');
+                    $manager->persist($com1);
+
+                    $sc1 = new DetailCommande();
+                    $sc1->setProduit($Produit1);
+                    $sc1->setCommande($com1);
+                    $sc1->setQuantite(5);
+                    $manager->persist($sc1);
+
+                    $sc2 = new DetailCommande();
+                    $sc2->setProduit($Produit2);
+                    $sc2->setCommande($com1);
+                    $sc2->setQuantite(2);
+                    $manager->persist($sc2);
+
+
 
       $manager->flush();
     }
